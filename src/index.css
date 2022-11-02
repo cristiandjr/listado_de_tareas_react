@@ -51,18 +51,120 @@ img {
     text-align: center;
     margin-bottom: 2rem;
 }
-
+::-webkit-scrollbar {
+    display: none;
+}
+::scrollbar {
+    display: none;
+}
 /* ===== header */
 .header {
-    height: 100vh;
-    background-image: url(../src/assets/header.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    color: black;
+    margin: 0;
+    padding: 0;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+}
+.header__contenedor {
+    box-sizing: border-box;
+    min-height: 100vh;
+    position: relative;
+    transform-style: inherit;
+    width: 100vw;
+    text-align: center;
+}
+.header__contenedor h1 {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.header__contenedor,
+.header__contenedor:before {
+    background: 50% 50% / cover;
+}
+.header__contenedor::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background: url(/src/assets/header.jpg);
     background-size: cover;
+    transform-origin: center center 0;
+    transform: translateZ(-1px) scale(2);
+    z-index: -1;
+    min-height: 100vh;
+    backdrop-filter: blur(-101px);
+    filter: blur(5px);
+}
+.header__contenedor span {
+    background-color: #00d1b4;
+}
+.scroll-down {
+    position: absolute;
+    bottom: 8rem;
+    left: 0;
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .scroll-down  {
+        bottom: 18rem;
+    }
 }
 
+.mouse-wrapper {
+    font-size: 1.2rem;
+    display: block;
+    margin: auto;
+    max-width: 0%;
+    text-align: center;
+}
+.mouse {
+    border: 2px solid black;
+    display: block;
+    height: 2.75rem;
+    width: 2.25rem;
+    margin: auto;
+    border-radius: 1rem;
+    position: relative;
+}
+.mouse .wheel {
+    background-color: black;
+    border-radius: 1rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    position: absolute;
+    top: 0.5rem;
+    left: 20%;
+    display: block;
+    animation: wheel 1s linear infinite;
+}
+@keyframes wheel {
+    0% {
+        top: 29%;
+    }
+    15% {
+        top: 50%;
+    }
+    50% {
+        top: 50%;
+    }
+    100% {
+        top: 29%;
+    }
+}
 /* ===== tareas */
 .tareas {
+    z-index: 2;
     margin-top: 3rem;
     margin-bottom: 5rem;
 }

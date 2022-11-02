@@ -1,8 +1,12 @@
 import { useEffect, useState } from 'react'
 
+import Header from './components/Header'
+import Buscador from './components/Buscador'
 import Formulario from './components/Formulario'
 import ListaTareas from './components/ListaTareas'
-import Buscador from './components/Buscador'
+import Descarga from './components/Descarga'
+import Testimonios from './components/Testimonios'
+import Footer from './components/Footer'
 
 import './index.css'
 
@@ -60,7 +64,7 @@ function App() {
   return (
     <div className="App" id='inicio'>
       
-      <header className='header'></header>
+      <Header />
 
       <main className="tareas" id='crear'>
         <h2 className="tareas__heading">Seguimiento de Tareas 📝</h2>
@@ -109,81 +113,9 @@ function App() {
         </div>
       </main>
 
-      <section className="descarga" id='descarga'>
-        <div className="descarga__contenedor">
-          <h2 className="descarga__heading">Descarga Lista de Tareas App 📱</h2>
-          <div className="descarga__grid">
-            <div className="descarga__imagen">
-              <img src="/celu.png" alt="Lista de tareas Imagen" />
-            </div>
-            <div className="listado">
-              <div className="listado__elemento">
-                <p>Descarga la app en tu celular para mayor comodidad</p>
-              </div>
-              <div className="listado__elemento">
-                <p>Organiza tu día, semana o mes para cumplir tus metas</p>
-              </div>
-              <div className="listado__elemento">
-                <p>Alarmas personalizadas antes de que venza una fecha</p>
-              </div>
-              <div className="listado__elemento">
-                <p>No necesitas conexión a internet</p>
-              </div>
-              <div className="listado__elemento">
-                <p>Compatible con cualquier Sistema Operativo</p>
-              </div>
-            </div>
-          
-          </div>
-        </div>
-      </section>
-
-      <section className="testimonios" id='testimonios'>
-        <div className="testimonios__contenedor">
-          <h2 className="testimonios__heading">Testimonios 🙌</h2>
-          <div className="testimonios__grid">
-            <div className="testimonio">
-              <p className="testimonio__texto">Excelente app de me organiza el día.</p>
-              <p className="testimonio__autor">Denzel Washington</p>
-            </div>
-            <div className="testimonio">
-              <p className="testimonio__texto">La verdad que me cambio el día, es un ayuda de memoria increíble.</p>
-              <p className="testimonio__autor">Bruce Willis</p>
-            </div>
-            <div className="testimonio">
-              <p className="testimonio__texto">Desde que descargue la app me siento mas cómodo.</p>
-              <p className="testimonio__autor">Christian Bale</p>
-            </div>
-            <div className="testimonio">
-              <p className="testimonio__texto">Lastima no conocer antes esta app!, excelente!.</p>
-              <p className="testimonio__autor">Keanu Reeves</p>
-            </div>
-            <div className="testimonio">
-              <p className="testimonio__texto">Que comodo se me hace el día.</p>
-              <p className="testimonio__autor">Tom Cruise</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <footer className="footer">
-        <div className="footer__contenedor">
-          <div className="footer__grid">
-            <div className="footer__logo">
-              <img src="/footer_logo.png" alt="Logo Footer" />
-            </div>
-            <div className="footer__web">
-              <a href="http://cristiandjr.com" target="_blank">Creado por cristiandjr</a>
-            </div>
-            <nav className="navegacion">
-              <a href="#inicio">Home</a>
-              <a href="#crear">Crea tu lista de Tareas</a>
-              <a href="#descarga">Descarga la app</a>
-              <a href="#testimonios">Testimonios</a>
-            </nav>
-          </div>
-        </div>
-      </footer>
+      <Descarga />
+      <Testimonios />
+      <Footer />
 
     </div>
   )
