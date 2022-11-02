@@ -114,7 +114,7 @@ function App() {
           <h2 className="descarga__heading">Descarga Lista de Tareas App 📱</h2>
           <div className="descarga__grid">
             <div className="descarga__imagen">
-              <img src="https://jade-cat-592245.netlify.app/src/assets/celu.png" alt="Lista de tareas Imagen" />
+              <img src="/celu.png" alt="Lista de tareas Imagen" />
             </div>
             <div className="listado">
               <div className="listado__elemento">
