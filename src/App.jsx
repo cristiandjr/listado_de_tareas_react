@@ -114,7 +114,7 @@ function App() {
           <h2 className="descarga__heading">Descarga Lista de Tareas App 📱</h2>
           <div className="descarga__grid">
             <div className="descarga__imagen">
-              <img src="../src/assets/celu.png" alt="img del celular mostrando la lista de tareas" />
+              <img src="/src/assets/celu.png" alt="img del celular mostrando la lista de tareas" />
             </div>
             <div className="listado">
               <div className="listado__elemento">
@@ -133,7 +133,7 @@ function App() {
                 <p>Compatible con cualquier Sistema Operativo</p>
               </div>
             </div>
-           
+          
           </div>
         </div>
       </section>
@@ -170,14 +170,14 @@ function App() {
         <div className="footer__contenedor">
           <div className="footer__grid">
             <div className="footer__logo">
-              <img src="../src/assets/footer_logo.png" alt="img del logo footer" />
+              <img src="../../src/assets/footer_logo.png" alt="img del logo footer" />
             </div>
             <div className="footer__web">
               <a href="http://cristiandjr.com" target="_blank">Creado por cristiandjr</a>
             </div>
             <nav className="navegacion">
               <a href="#inicio">Home</a>
-              <a href="#crear">Crea tu lista de tareas</a>
+              <a href="#crear">Crea tu lista de Tareas</a>
               <a href="#descarga">Descarga la app</a>
               <a href="#testimonios">Testimonios</a>
             </nav>
