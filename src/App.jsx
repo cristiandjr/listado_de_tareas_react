@@ -170,7 +170,7 @@ function App() {
         <div className="footer__contenedor">
           <div className="footer__grid">
             <div className="footer__logo">
-              <img src="../src/assets/footer_logo.png" alt="Logo Footer" />
+              <img src="/footer_logo.png" alt="Logo Footer" />
             </div>
             <div className="footer__web">
               <a href="http://cristiandjr.com" target="_blank">Creado por cristiandjr</a>
